@@ -8,8 +8,8 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.kmmsocial.Greeting
-import com.example.kmmsocial.android.common.SocialAppTheme
+import com.example.kmmsocial.android.common.theming.SocialAppTheme
+import com.example.kmmsocial.android.presentation.SocialAppLauncher
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingView(Greeting().greet())
+                    SocialAppLauncher()
                 }
             }
         }

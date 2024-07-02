@@ -1,4 +1,4 @@
-package com.example.kmmsocial.android.common
+package com.example.kmmsocial.android.common.theming
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -22,3 +22,4 @@ fun SocialAppTheme(
         content = content
     )
 }
+

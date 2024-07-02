@@ -1,21 +1,48 @@
-package com.example.kmmsocial.android.common
+package com.example.kmmsocial.android.common.theming
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontLoadingStrategy
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.example.kmmsocial.android.R
 
 val Lexend = FontFamily(
-    Font(R.font.lexend_medium, FontWeight.Medium),
-    Font(R.font.lexend_semi_bold, FontWeight.SemiBold),
-    Font(R.font.lexend_bold, FontWeight.Bold)
+    Font(
+        R.font.lexend_medium,
+        FontWeight.Medium,
+        FontStyle.Normal,
+        FontLoadingStrategy.OptionalLocal
+    ),
+    Font(
+        R.font.lexend_semi_bold,
+        FontWeight.SemiBold,
+        FontStyle.Normal,
+        FontLoadingStrategy.OptionalLocal
+    ),
+    Font(
+        R.font.lexend_bold,
+        FontWeight.Bold,
+        FontStyle.Normal,
+        FontLoadingStrategy.OptionalLocal
+    )
 )
 val OpenSans = FontFamily(
-    Font(R.font.open_sans_light, FontWeight.Light),
-    Font(R.font.open_sans_regular, FontWeight.Normal)
+    Font(
+        R.font.open_sans_light,
+        FontWeight.Light,
+        FontStyle.Normal,
+        FontLoadingStrategy.OptionalLocal
+    ),
+    Font(
+        R.font.open_sans_regular,
+        FontWeight.Normal,
+        FontStyle.Normal,
+        FontLoadingStrategy.OptionalLocal
+    )
 )
 
 val Typography = Typography().copy(

@@ -1,4 +1,4 @@
-package com.example.kmmsocial.android.common
+package com.example.kmmsocial.android.common.theming
 
 import androidx.compose.ui.unit.dp
 

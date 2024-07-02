@@ -1,4 +1,4 @@
-package com.example.kmmsocial.android.common
+package com.example.kmmsocial.android.common.theming
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

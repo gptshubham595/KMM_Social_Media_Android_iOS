@@ -35,6 +35,16 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
+    sourceSets {
+        getByName("main") {
+            java {
+                srcDirs("../main/java")
+            }
+            kotlin {
+                srcDirs("../main/kotlin")
+            }
+        }
+    }
 }
 
 dependencies {
@@ -57,5 +67,4 @@ dependencies {
 
     implementation(libs.compose.destinations.core)
     ksp(libs.compose.destinations.ksp)
-
 }
