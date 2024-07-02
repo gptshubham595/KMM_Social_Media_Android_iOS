@@ -4,6 +4,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import com.example.kmmsocial.android.core.domain.auth.models.DataChange
+import com.example.kmmsocial.android.core.domain.auth.models.SignupDateChange
 import com.example.kmmsocial.android.core.domain.auth.models.SignupUiState
 
 class SignupViewModel : ViewModel() {
@@ -17,6 +19,7 @@ class SignupViewModel : ViewModel() {
     fun updateEmail(email: String) {
         uiState = uiState.copy(email = email)
     }
+
 
     fun updatePassword(password: String) {
         uiState = uiState.copy(password = password)

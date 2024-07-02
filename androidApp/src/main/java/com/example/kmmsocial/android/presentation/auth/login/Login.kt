@@ -12,11 +12,11 @@ import org.koin.androidx.compose.koinViewModel
 fun Login(
     navigator: DestinationsNavigator // replacement for nav controller
 ) {
-    val viewModel : LoginViewModel = koinViewModel()
+    val viewModel: LoginViewModel = koinViewModel()
     LoginScreen(uiState = viewModel.uiState) { onDataChange: LoginDateChange ->
-        when(onDataChange.changeParam) {
-            DataChange.EMAIL -> viewModel::updateEmail
-            DataChange.PASSWORD -> viewModel::updatePassword
+        when (onDataChange.changeParam) {
+            DataChange.EMAIL -> viewModel.updateEmail(onDataChange.value)
+            DataChange.PASSWORD -> viewModel.updatePassword(onDataChange.value)
             DataChange.USERNAME -> {}
         }
 

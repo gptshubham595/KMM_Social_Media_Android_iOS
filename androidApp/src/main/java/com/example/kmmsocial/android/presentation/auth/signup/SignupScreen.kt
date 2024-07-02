@@ -22,11 +22,11 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.kmmsocial.android.R
+import com.example.kmmsocial.android.common.component.CustomTextView
 import com.example.kmmsocial.android.common.theming.ButtonHeight
 import com.example.kmmsocial.android.common.theming.ExtraLargeSpacing
 import com.example.kmmsocial.android.common.theming.LargeSpacing
 import com.example.kmmsocial.android.common.theming.MediumSpacing
-import com.example.kmmsocial.android.common.component.CustomTextView
 import com.example.kmmsocial.android.core.domain.auth.models.DataChange
 import com.example.kmmsocial.android.core.domain.auth.models.SignupDateChange
 import com.example.kmmsocial.android.core.domain.auth.models.SignupUiState
@@ -36,6 +36,9 @@ fun SignupScreen(
     modifier: Modifier = Modifier,
     uiState: SignupUiState,
     onDataChange: (SignupDateChange) -> Unit,
+    /*onUsernameChange: (String) -> Unit,*/
+//    onEmailChange: (String) -> Unit,
+//    onPasswordChange: (String) -> Unit,
 ) {
     Column(
         modifier = modifier
@@ -59,20 +62,21 @@ fun SignupScreen(
     ) {
         CustomTextView(
             value = uiState.userName,
-            onValueChange = { it ->
-                onDataChange(
+            onValueChange = {
+                onDataChange.invoke(
                     SignupDateChange(
                         changeParam = DataChange.USERNAME,
                         value = it
                     )
                 )
             },
+            /*onUsernameChange*/
             hint = R.string.username_hint,
         )
         CustomTextView(
             value = uiState.email,
             onValueChange = {
-                onDataChange(
+                onDataChange.invoke(
                     SignupDateChange(
                         changeParam = DataChange.EMAIL,
                         value = it
@@ -85,7 +89,7 @@ fun SignupScreen(
         CustomTextView(
             value = uiState.password,
             onValueChange = {
-                onDataChange(
+                onDataChange.invoke(
                     SignupDateChange(
                         changeParam = DataChange.PASSWORD,
                         value = it
@@ -123,6 +127,9 @@ fun SignupScreenPreview() {
             password = "123456",
             userName = "abc"
         ),
-        onDataChange = {}
+        onDataChange = {},
+//        onUsernameChange = {},
+//        onEmailChange = {},
+//        onPasswordChange = {}
     )
 }

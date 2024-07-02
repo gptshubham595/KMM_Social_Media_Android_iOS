@@ -26,16 +26,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
-@Composable
-fun GreetingView(text: String) {
-    Text(text = text)
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    SocialAppTheme {
-        GreetingView("Hello, Android!")
-    }
-}
